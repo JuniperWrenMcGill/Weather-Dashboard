@@ -10,3 +10,6 @@ This project aims to provide a 5-day weather forecast for a any location. Curren
 
 # License
 This project is under construction and currently not licensed for public use. Check back later for updates on licensing.
+
+# Website Link
+Woud you like to follow along and watch the progress? You can find the launched website <a href="https://juniperwrenmcgill.github.io/Weather-Dashboard/" target="_blank"> by clicking here.</a>
