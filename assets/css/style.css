@@ -61,6 +61,33 @@ main {
     margin: 0 0 20px 0;
 }
 
+/* Forecast Days */
+#forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px; /* Add a gap between the forecast boxes */
+}
+
+.forecast-day {
+    flex: 1 1 18%; /* Distribute space evenly between forecast days */
+    background-color: #007bff; /* Bootstrap primary color for consistency */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Slightly darker shadow for depth */
+    text-align: center;
+    min-width: 120px; /* Minimum width for smaller screens */
+}
+
+.forecast-day h4 {
+    margin: 10px 0; /* Spacing above and below the date */
+}
+
+.forecast-day p {
+    margin: 5px 0; /* Spacing between paragraphs */
+}
+
 /* Search History */
 #search-history {
     flex-basis: 100%;
