@@ -1,15 +1,37 @@
-# 5-Day Weather Forecast - Under Construction
-# Overview
-This project aims to provide a 5-day weather forecast for a any location. Currently, the project is under construction and not yet ready for public use.
+# Juniper's Five Day Weather Dashboard
 
+## Description
 
-# Features (Under Development)
-- Fetch and display weather data for the next 5 days for given city.
-- Include key weather parameters such as temperature, humidity, and wind speed.
-- User-friendly interface for easy navigation and understanding.
+This Weather Dashboard is a web application that allows users to search for and view current weather conditions and a 5-day forecast for any city. The application uses the OpenWeather API to retrieve weather data and display it in a user-friendly interface.
 
-# License
-This project is under construction and currently not licensed for public use. Check back later for updates on licensing.
+![Screenshot of webpage](assets/images/Finished.png)
 
-# Website Link
-Woud you like to follow along and watch the progress? You can find the launched website <a href="https://juniperwrenmcgill.github.io/Weather-Dashboard/" target="_blank"> by clicking here.</a>
+## Features
+
+- Search functionality for finding current weather data by city name.
+- Display of current weather conditions including temperature, humidity, wind speed, and more.
+- A 5-day weather forecast that shows temperature, wind, and humidity.
+- A search history that saves previous searches.
+
+## Usage
+To use the Weather Dashboard:
+
+1. Visit <a href="https://juniperwrenmcgill.github.io/Weather-Dashboard/" target="_blank"> [https://juniperwrenmcgill.github.io/Weather-Dashboard/].</a>
+2. Enter the name of the city in the search bar.
+3. Click on the 'Search' button to retrieve weather data.
+4. View the current weather conditions displayed at the top section.
+5. Scroll down to see the 5-day weather forecast.
+6. Recently serched cities are saved with local storage and avaible on refresh. 
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- OpenWeather API
+
+## License
+Distributed under the MIT License. 
+
+## Contact
+For any questions, please contact me on GitHub at [JuniperWrenMcGill](https://github.com/JuniperWrenMcGill) 
