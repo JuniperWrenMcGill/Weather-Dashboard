@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -14,26 +14,27 @@
     </header>
     <main>
         <section id="search-section">
-            <form id="city-search-form">
-                <input type="text" id="city-input" placeholder="Enter city name" required>
-                <button type="submit">Search</button>
+            <form id="city-search-form" aria-label="City search form">
+                <label for="city-input" class="visually-hidden">Enter city name</label>
+                <input type="text" id="city-input" placeholder="Enter city name" aria-required="true">
+                <button type="submit" aria-label="Search city">Search</button>
             </form>
         </section>
         <section id="current-weather">
             <h2>Current Weather</h2>
-            <div id="weather-details">
+            <div id="weather-details" role="region" aria-live="polite">
                 <!-- Weather details will be dynamically inserted here -->
             </div>
         </section>
         <section id="forecast">
             <h2>5-Day Forecast</h2>
-            <div id="forecast-container">
+            <div id="forecast-container" role="region" aria-live="polite">
                 <!-- 5-day forecast details will be dynamically inserted here -->
             </div>
         </section>
         <section id="search-history">
             <h2>Search History</h2>
-            <ul id="history-list">
+            <ul id="history-list" role="navigation">
                 <!-- Search history will be dynamically inserted here -->
             </ul>
         </section>
