@@ -1,9 +1,16 @@
 /* Base styling */
-body, html {
+html {
+    height: 100%; /* Make sure html takes up full viewport height */
+}
+
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f7f7; /* Light gray background */
+    height: 100%; /* Make sure body takes up full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack children elements vertically */
 }
 
 header {
@@ -14,15 +21,16 @@ header {
 }
 
 main {
+    flex: 1; /* Flex-grow to take up all available space */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; /* Stack children elements vertically */
+    justify-content: flex-start; /* Align content to the top */
     padding: 20px;
+    overflow: auto; /* Add scroll to the main content if needed */
 }
 
 /* Search Section */
 #search-section {
-    flex-basis: 100%;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -55,6 +63,7 @@ main {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: calc(100% - 40px);
     max-width: 600px;
+    align-self: center; /* Center the blocks in the main container */
 }
 
 #current-weather h2, #forecast h2 {
@@ -66,31 +75,30 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 10px; /* Add a gap between the forecast boxes */
+    gap: 10px;
 }
 
 .forecast-day {
-    flex: 1 1 18%; /* Distribute space evenly between forecast days */
-    background-color: #007bff; /* Bootstrap primary color for consistency */
+    flex: 1 1 18%;
+    background-color: #007bff;
     color: white;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Slightly darker shadow for depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     text-align: center;
-    min-width: 120px; /* Minimum width for smaller screens */
+    min-width: 120px;
 }
 
 .forecast-day h4 {
-    margin: 10px 0; /* Spacing above and below the date */
+    margin: 10px 0;
 }
 
 .forecast-day p {
-    margin: 5px 0; /* Spacing between paragraphs */
+    margin: 5px 0;
 }
 
 /* Search History */
 #search-history {
-    flex-basis: 100%;
     text-align: center;
 }
 
@@ -100,7 +108,7 @@ main {
 }
 
 #history-list li {
-    background-color: #007bff; /* primary color */
+    background-color: #007bff;
     color: white;
     padding: 10px;
     margin-bottom: 5px;
@@ -109,22 +117,17 @@ main {
 }
 
 #history-list li:hover {
-    background-color: #0056b3; /* Darker on hover */
+    background-color: #0056b3;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #004a7c;
     color: white;
-    position: fixed; /* Fix position to the bottom of the screen */
-    bottom: 0; /* Align to bottom */
-    left: 0; /* Align to left */
-    width: 100%; /* Ensure it spans the full width of the viewport */
-    box-sizing: border-box; /* Include padding in the width */
-}
-
-/* Adjust the bottom padding of the main content so it doesn't get hidden behind the fixed footer */
-main {
-    padding-bottom: 70px; /* Adjust this value based on the actual height of your footer */
+    position: relative; /* Footer is part of the flow and pushed to the bottom by the main content */
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto; /* Push the footer to the bottom */
 }
