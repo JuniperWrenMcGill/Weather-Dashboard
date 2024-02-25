@@ -100,7 +100,7 @@ main {
 }
 
 #history-list li {
-    background-color: #007bff; /* Bootstrap primary color */
+    background-color: #007bff; /* primary color */
     color: white;
     padding: 10px;
     margin-bottom: 5px;
@@ -117,5 +117,14 @@ footer {
     padding: 20px;
     background-color: #004a7c;
     color: white;
-    margin-top: 20px;
+    position: fixed; /* Fix position to the bottom of the screen */
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to left */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+/* Adjust the bottom padding of the main content so it doesn't get hidden behind the fixed footer */
+main {
+    padding-bottom: 70px; /* Adjust this value based on the actual height of your footer */
 }
